@@ -1,0 +1,105 @@
+<style>
+.body {
+  color: black;
+  background-image: url("https://images.pexels.com/photos/304664/pexels-photo-304664.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+  background-repeat: no-repeat;
+min-height: 700px;
+}
+</style>
+
+<div class="body">
+  <div class="container">
+<button type="button" class="btn btn-info"><a routerLink="/stockprice" label>Add stockprice</a></button><br>
+<table class="table table-hover table-sm" >
+
+    <thead>
+  
+     <tr>
+  
+  
+  
+     <th>Companyname</th>
+  
+  
+  
+     <th>Stockexchange</th>
+  
+  
+  
+     <th>Currentprice</th>
+  
+  
+  
+     <th>Datef</th>
+  
+  
+  
+     <th>Time</th>
+  
+     <th>Action</th>
+  
+  
+  
+  
+  
+     </tr>
+  
+  
+  
+  
+  
+  
+  
+    </thead>
+  
+  
+  
+  
+  
+  
+  
+    <tbody>
+  
+  
+  
+  
+  
+  
+  
+     <tr *ngFor="let stockprice of stockpriceList ">
+  
+  
+  
+     <td>{{stockprice.companyname}}</td>
+  
+  
+  
+      <td>{{stockprice.stockexchange}}</td>
+  
+  
+  
+     <td>{{stockprice.currentprice}}</td>
+  
+  
+  
+     <td>{{stockprice.date}}</td>
+  
+  
+  
+     <td>{{stockprice.time}}</td>
+  
+     <button (click)="deleteStockPrice(stockprice)" class='btn btn-danger'>Delete</button>&nbsp;
+  
+     <button (click)="updateStockPrice(stockprice)" class='btn btn-primary'>Update</button>
+  
+  
+  
+     </tr>
+  
+  
+  
+    </tbody><br>
+  
+  </table>
+</div>
+</div> 

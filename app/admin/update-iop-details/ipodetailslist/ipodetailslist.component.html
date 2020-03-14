@@ -1,0 +1,77 @@
+<style>
+  .body {
+    color: black;
+    background-image: url("https://images.pexels.com/photos/304664/pexels-photo-304664.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+    background-repeat: no-repeat;
+  min-height: 700px;
+  }
+  </style>
+  
+  <div class="body">
+    <div class="container">
+<button type="button" class="btn btn-info"><a routerLink="/update-iop-details" label>Add ipodetails</a></button><br>
+        <table  class="table table-hover table-sm"  > 
+            <thead>
+      
+              <tr>
+      
+                <th>Ipoid</th>
+      
+                <th>Companyname</th>
+      
+                <th>Stockexchange</th>
+      
+                <th>Pricepershare</th>
+      
+                <th>Totalnoofshares</th>
+      
+                <th>Opendatetime</th>
+      
+      
+              </tr>
+      
+            </thead>
+      
+            <tbody>
+      
+               <tr *ngFor="let ipodetails of ipodetailsList ">
+      
+                <td>{{ipodetails.ipoid}}</td>
+      
+                <td>{{ipodetails.companyname}}</td>
+      
+                <td>{{ipodetails.stockexchange}}</td>
+      
+                <td>{{ipodetails.pricepershare}}</td>
+      
+                <td>{{ipodetails.totalnoofshares}}</td>
+      
+                <td>{{ipodetails.opendatetime}}</td>
+      
+      
+<td><button (click)="deleteIpoDetails(ipodetails)" class='btn btn-danger'><i class="fa fa-futboll-0">Delete</i></button> &nbsp;
+
+  <button (click)="updateIpoDetails(ipodetails)" class='btn btn-primary'
+
+  data-toggle="modal" data-target="#myModal">Update</button>
+
+ </td>
+
+
+               </tr>
+      
+            </tbody><br>
+      
+          </table>
+          </div>
+          </div>
+          
+    
+      
+      
+      
+       
+      
+      
+      
+      

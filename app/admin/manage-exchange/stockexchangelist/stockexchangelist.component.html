@@ -1,0 +1,71 @@
+<style>
+  .body {
+    color: black;
+    background-image: url("https://images.pexels.com/photos/304664/pexels-photo-304664.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+    background-repeat: no-repeat;
+  min-height: 700px;
+  }
+  </style>
+  
+  <div class="body">
+    <div class="container">
+<button type="button" class="btn btn-info"><a routerLink="/manage-exchange" label>Add Stockexchange</a></button><br>
+        <table  class="table table-hover table-sm"  > 
+            <thead>
+      
+              <tr>
+      
+                <th>stockexid</th>
+      
+                <th>Stockexchange</th>
+      
+                <th>Brief</th>
+      
+                <th>Remarks</th>
+      
+                <th>Contactaddress</th>
+      
+      
+              </tr>
+      
+            </thead>
+      
+            <tbody>
+      
+               <tr *ngFor="let stockexch of stockexchangeList ">
+      
+                <td>{{stockexch.stockexid}}</td>
+      
+                <td>{{stockexch.stockexchange}}</td>
+      
+                <td>{{stockexch.brief}}</td>
+      
+                <td>{{stockexch.remarks}}</td>
+      
+                <td>{{stockexch.contactaddress}}</td>
+      
+                <td><button (click)="deleteStockExchange(stockexch)" class='btn btn-danger'><i class="fa fa-futboll-0">Delete</i></button> &nbsp;
+
+                  <button (click)="updateStockExchange(stockexch)" class='btn btn-primary'
+             
+                  data-toggle="modal" data-target="#myModal">Update</button>
+             
+                 </td>
+      
+      
+               </tr>
+      
+            </tbody><br>
+      
+          </table>
+    </div>
+  </div>
+      
+      
+      
+       
+      
+      
+      
+      
+

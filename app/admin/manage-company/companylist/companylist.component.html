@@ -1,0 +1,82 @@
+<style>
+  .body {
+    color: black;
+    background-image: url("https://images.pexels.com/photos/304664/pexels-photo-304664.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+    background-repeat: no-repeat;
+  min-height: 700px;
+  }
+  </style>
+  
+  <div class="body">
+    <div class="container">
+<button type="button" class="btn btn-info"><a routerLink="/manage-company" label>Add Company</a></button><br>
+
+        <table  class="table table-hover table-sm"  > 
+            <thead>
+      
+              <tr>
+      
+                <th>CompanyName</th>
+      
+                <th>turnover</th>
+      
+                <th>Ceoname</th>
+      
+                <th>Bod</th>
+      
+                <th>Listedinse</th>
+      
+                <th>sector</th>
+      
+                <th>remarks</th>
+
+                <th>stockcode</th>
+      
+              </tr>
+      
+            </thead>
+      
+            <tbody>
+      
+               <tr *ngFor="let company of companyList ">
+      
+                <td>{{company.companyname}}</td>
+      
+                <td>{{company.turnover}}</td>
+      
+                <td>{{company.ceoname}}</td>
+      
+                <td>{{company.bod}}</td>
+      
+                <td>{{company.listedinse}}</td>
+      
+                <td>{{company.sector}}</td>
+      
+                <td>{{company.remarks}}</td>
+
+                <td>{{company.stockcode}}</td>
+
+                <td><button (click)="deleteCompany(company)" class='btn btn-danger'><i class="fa fa-futboll-0">Delete</i></button> &nbsp;
+
+                  <button (click)="updateCompany(company)" class='btn btn-primary'
+             
+                  data-toggle="modal" data-target="#myModal">Update</button>
+             
+                 </td>
+      
+               </tr>
+      
+            </tbody><br>
+      
+          </table>
+    </div>
+  </div>
+    
+      
+      
+      
+       
+      
+      
+      
+      
